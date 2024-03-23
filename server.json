@@ -1,3 +1,44 @@
 {
-  "transactions": []
+  "transactions": [
+    {
+      "description": "Desenvolvimento de app",
+      "category": "Venda",
+      "price": 15000,
+      "type": "income",
+      "createdAt": "2024-03-23T21:00:21.228Z",
+      "id": 1
+    },
+    {
+      "description": "Almoço do time",
+      "category": "Alimentação",
+      "price": 50,
+      "type": "outcome",
+      "createdAt": "2024-03-23T21:00:42.046Z",
+      "id": 2
+    },
+    {
+      "description": "Carro",
+      "category": "Transporte",
+      "price": 8000,
+      "type": "outcome",
+      "createdAt": "2024-03-23T21:01:04.778Z",
+      "id": 3
+    },
+    {
+      "description": "Freelance",
+      "category": "Trabalho",
+      "price": 3000,
+      "type": "income",
+      "createdAt": "2024-03-23T21:22:29.987Z",
+      "id": 4
+    },
+    {
+      "description": "Coxinha",
+      "category": "Alimentação",
+      "price": 4,
+      "type": "outcome",
+      "createdAt": "2024-03-23T21:22:47.954Z",
+      "id": 5
+    }
+  ]
 }

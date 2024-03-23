@@ -59,30 +59,35 @@ export function NewTransactionModal({ isModalOpen }: NewTransactionModalProps) {
     isModalOpen()
   }
 
+  const resetModalOnClose = () => reset()
+
   return (
     <Dialog.Portal>
       <Overlay />
       <Content>
         <Dialog.Title>Nova transação</Dialog.Title>
-        <CloseButton>
+        <CloseButton onClick={resetModalOnClose}>
           <X size={24} />
         </CloseButton>
         <form onSubmit={handleSubmit(handleCreateNewTransaction)}>
           <input
             type="text"
             placeholder="Descrição"
+            autoComplete="off"
             required
             {...register('description')}
           />
           <input
             type="number"
             placeholder="Preço"
+            autoComplete="off"
             required
             {...register('price', { valueAsNumber: true })}
           />
           <input
             type="text"
             placeholder="Categoria"
+            autoComplete="off"
             required
             {...register('category')}
           />

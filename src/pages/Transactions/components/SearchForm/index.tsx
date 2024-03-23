@@ -21,12 +21,9 @@ export function SearchForm() {
     register,
     handleSubmit,
     formState: { isSubmitting },
-    watch,
   } = useForm<SearchFormInputs>({
     resolver: zodResolver(searchFormSchema),
   })
-
-  const query = watch('query')
 
   const handleSearchTransactions = async (data: SearchFormInputs) => {
     await fetchTransactions(data.query)
@@ -37,9 +34,10 @@ export function SearchForm() {
       <input
         type="text"
         placeholder="Busque por transações"
+        autoComplete="off"
         {...register('query')}
       />
-      <button type="submit" disabled={isSubmitting || query === ''}>
+      <button type="submit" disabled={isSubmitting}>
         <MagnifyingGlass size={20} />
         Buscar
       </button>
